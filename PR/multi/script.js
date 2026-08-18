@@ -1,19 +1,23 @@
-//wap to sum of all digits of number 
+let n = 123;
+let original = n;
 
-let num = 123;
-let i;
-sum = 0;
-multi = 1;
+let sum = 0;
+let multi = 1;
 
-for (i = 1; i <= 3; i++) {
-    sum += i;
+while (n > 0) {
+    let digit = n % 10;
+
+    sum = sum + digit;
+
+    multi = multi * digit;
+
+    n = Math.floor(n / 10);
 }
-console.log("1 + 2 + 3 =", sum);
 
-for (i = 1; i <= 3; i++) {
-    multi *= i;
+
+if (sum == multi) {
+    console.log(original + " is a magic number");
 }
-console.log("1 * 2 * 3 =", multi);
-
-
-
+else {
+    console.log(original + " is not a magic number");
+}
