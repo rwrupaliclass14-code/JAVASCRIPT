@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function minimum(a, b, c, d) {
+
+            if (a < b) {
+                if (a < c) {
+                    if (a < d) {
+                        console.log("a is minimum")
+                    }
+                    else {
+                        console.log("d is minimum")
+                    }
+                }
+                else {
+                    if (c < b) {
+                        if (c < d) {
+                            console.log("c is minimum")
+                        }
+                        else {
+                            console.log("d is minimum")
+                        }
+
+                    }
+                    else {
+                        if (b < c) {
+                            if (b < d) {
+                                console.log("b is minimum")
+                            }
+                            else {
+                                console.log("d is minimum")
+                            }
+
+                        }
+                        else {
+
+                        }
+
+                    }
+
+                }
+            }
+            else {
+                if (b > c) {
+                    console.log("b is minimum");
+                }
+                else {
+                    console.log("c is minimum");
+                }
+
+            }
+            return minimum;
+        }
+        minimum(300, 90, 100)
+    </script>
+</body>
+
+</html>
