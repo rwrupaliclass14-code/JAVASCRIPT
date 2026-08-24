@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //wap to check magic number by using function.
+        function magic(n) {
+            let original = n;
+
+            let sum = 0;
+            let multi = 1;
+
+            while (n > 0) {
+                let digit = n % 10;
+
+                sum = sum + digit;
+
+                multi = multi * digit;
+
+                n = Math.floor(n / 10);
+            }
+
+
+            if (sum === multi) {
+                console.log(original + " is a magic number");
+            }
+            else {
+                console.log(original + " is not magic number");
+            }
+
+        }
+        magic(121);
+        magic(123);
+
+    </script>
+</body>
+
+</html>
