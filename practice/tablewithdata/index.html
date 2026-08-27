@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table border="2" id="tbl">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Age</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody id="tblBody">
+
+        </tbody>
+
+    </table>
+    <script>
+        var array = [{ "fname": 'rupali', age: 23, "phone": 235324234 }, { "fname": "akshay", age: 27, "phone": 754734563 }, { "fname": "akshay", age: 27, "phone": 754734563 }];
+        //wap to program print revers program by using array.
+        var tbody = document.getElementById("tblBody");
+
+        let rows = array.map((i) => {
+            let tr = document.createElement("tr");
+            tr.innerHTML = `<td>${i.fname}</td><td>${i.age}</td><td>${i.phone}</td>`;
+            return tr;
+        });
+
+        // Append ALL rows to the DOM in one single shot
+        tbody.append(...rows);
+    </script>
+</body>
+
+</html>
