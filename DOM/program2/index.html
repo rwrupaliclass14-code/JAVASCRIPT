@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="text">
+        This is JavaScript Practice.
+    </p>
+
+    <h2 id="heading">
+        JavaScript Font Size
+    </h2>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+    <button id="click-btn">click me</button>
+    <script>
+
+        //wap to change tax by .js
+
+
+        //  tex.textContent = ("change my name");
+
+
+
+        //show and hide text by button.
+
+        const text = document.getElementById("text");
+
+        const hideBtn = document.getElementById("hide");
+        const showBtn = document.getElementById("show");
+
+
+        hideBtn.addEventListener("click", () => {
+
+            text.style.display = "none";
+
+        });
+
+
+        showBtn.addEventListener("click", () => {
+
+            text.style.display = "block";
+
+        });
+
+        const heading = document.getElementById("heading")
+
+        const button = document.getElementById("click-btn");
+
+        button.addEventListener("click", () => {
+            heading.style.fontSize = "50px";
+        })
+
+    </script>
+</body>
+
+</html>
