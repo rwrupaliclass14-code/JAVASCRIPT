@@ -1,0 +1,22 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* Teeno cards ko same width dene ke liye */
+
+.card {
+  width: 320px;
+}
+
+/* Result screen ka score number thoda aur bada aur clean dikhe */
+#scoreValue {
+  letter-spacing: 1px;
+}
