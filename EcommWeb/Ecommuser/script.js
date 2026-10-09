@@ -1,5 +1,7 @@
 
 const productsContainer = document.getElementById("products-container");
+const inputSearch = document.getElementById("input-search");
+const searchBtn = document.getElementById("search-btn");
 
 const fetchProducts = () => {
     fetch("https://dummyjson.com/products")
@@ -44,5 +46,20 @@ const addToCart = (id) => {
 
     alert("Add to cart successfully !");
 }
+
+const searchProduct = () => {
+
+    let search = inputSearch.value.toLowerCase();
+
+    fetchProducts = carts.filter
+        (products =>
+            //array element me search karta hai element he ya nhi/ true of false//
+            products.title.toLowerCase().includes(search)
+        );
+
+    displayProducts();
+};
+
+searchBtn.addEventListener("click", searchProduct);
 
 fetchProducts();
